@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend/app/
+    ports: 
+      - "3030:3030"
+    volumes:
+      - ./backend/app:/home/node/app
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: teste
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./backend/database:/var/lib/mysql
+    ports:
+      - 3307:3306
