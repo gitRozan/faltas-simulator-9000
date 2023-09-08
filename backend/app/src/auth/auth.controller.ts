@@ -2,7 +2,9 @@ import { Controller, Get, Query } from '@nestjs/common';
 import { LoginDTO } from './dto/login.dto';
 import { AuthService } from './auth.service';
 import { LoginResponse } from 'src/interface/login-res.interface';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Autenticação')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}

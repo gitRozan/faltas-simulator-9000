@@ -4,7 +4,7 @@ import { ApiProperty } from '@nestjs/swagger';
 export class RegisterDTO {
   @ApiProperty({
     description: 'Nome de usuário',
-    example: 'nicolas_belchior ',
+    example: 'nicolas_belchior',
   })
   @IsString()
   username: string;
@@ -18,7 +18,7 @@ export class RegisterDTO {
 
   @ApiProperty({
     description: 'Email',
-    example: 'Nicolas Belchior ',
+    example: 'Nicolas Belchior',
   })
   @IsEmail()
   email: string;

@@ -4,7 +4,7 @@ import * as bcrypt from 'bcrypt';
 import { users } from '@prisma/client';
 
 @Injectable()
-export class UserService {
+export class ProfileService {
   constructor(private readonly prismaService: PrismaService) {}
 
   async getById(id: number) {
